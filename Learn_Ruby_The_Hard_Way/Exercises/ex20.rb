@@ -1,4 +1,4 @@
-input_file = ARGV.First
+input_file = ARGV.first
 
 def print_all(f)
     puts f.read

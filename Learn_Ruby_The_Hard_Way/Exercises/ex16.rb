@@ -17,18 +17,21 @@ puts "Now  I'm going to ask you for three lines."
 print "Line 1: "
 line1 = $stdin.gets.chomp
 print "Line 2: "
-$stdin.gets.chomp
+line2 = $stdin.gets.chomp
 print "Line 3: "
-$stdin.gets.chomp
+line3 = $stdin.gets.chomp
 
 puts "I'm going to write these to the file."
 
-target.write(line1)
-target.write("\n")
-target.write(line2)
-target.write("\n")
-target.write(line3)
-target.write("\n")
+target.write(line1, "\n" , line2, "\n", line3, "\n")
+#target.write("\n")
+#target.write(line2)
+#target.write("\n")
+#target.write(line3)
+#target.write("\n")
 
 puts "And Finally, we close it."
 target.close
+
+puts "Now to test what we wrote into the file: "
+print open(filename , 'r').read

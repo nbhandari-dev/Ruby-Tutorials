@@ -1,4 +1,4 @@
-from_file, to_file = ARGV
+from_file, to_file , to_file_short = ARGV
 
 puts "Copying from #{from_file}  to #{to_file}"
 
@@ -21,4 +21,6 @@ out_file.close
 in_file.close
 
 
-     
+#Shortest script -- All operations in one line
+puts "New copy_file in one line:"
+open(to_file_short , 'w').write(open(from_file).read)
